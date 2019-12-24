@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: Montserrat;
+}
+
+td {
+  padding: 10px;
+}
+
+.Banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  border-radius: 5px;
+
+  overflow: hidden;
+  background: white;
+  padding: 15px;
+
+  border-bottom: var(--ui-shawdow-border);
+  box-shadow: var(--ui-shawdow);
+}
+
+.Message, .Results {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  border-bottom: var(--ui-shawdow-border);
+  box-shadow: var(--ui-shawdow);
+}
+
+.upload {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}

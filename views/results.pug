@@ -1,0 +1,24 @@
+extends layout
+
+block layout-content
+  div.View
+    h1.Banner Imugic
+    div.Message
+      div.Title
+        h3 Turning Image into Music
+        h1 Showing Spotify results for song suggestions!
+    div.Results
+      h1 Results for: #{img_match}
+      table
+        tbody
+          - var i=1;
+          each song in songList
+            tr
+              td #{i}.
+              td #{song.name}
+              td #{song.album.name}
+              - var list=[];
+              each artist in song.artists
+                - list.push(artist.name);
+              td #{list.join(', ')}
+            - i++;

@@ -1,0 +1,14 @@
+extends layout
+
+block layout-content
+  div.View
+    h1.Banner Imugic
+    div.Message
+      div.Title
+        h3 Turning Image into Music
+        h1 Upload an image to get a personalized playlist!
+      span.Details Accepted formats: .jpg, .png
+    div.upload
+      form(action='/', method='post', enctype='multipart/form-data')
+        input(type='file', name='imageupload')
+        input(type='submit', name='uploadimage', value='Upload Image')
