@@ -39,10 +39,7 @@ const app = express();
 const port = process.env.PORT || "8000";
 
 async function imageMatch(path) {
-  const vision = require('@google-cloud/vision')({
-    projectId: 'imugic',
-    credentials: JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS)
-  });
+  const vision = require('@google-cloud/vision');
   const client = new vision.ImageAnnotatorClient();
 
   // Performs label detection on the image file
