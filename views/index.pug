@@ -2,7 +2,8 @@ extends layout
 
 block layout-content
   div.View
-    h1.Banner Imugic
+    a(class="button" href="/")
+      h1.Banner Imugic
     div.Message
       div.Title
         h3 Turning Image into Music
@@ -10,5 +11,5 @@ block layout-content
       span.Details Accepted formats: .jpg, .png
     div.upload
       form(action='/', method='post', enctype='multipart/form-data')
-        input(type='file', name='imageupload')
+        input(type='file', name='imageupload', accept="image/jpg image/png")
         input(type='submit', name='uploadimage', value='Upload Image')
